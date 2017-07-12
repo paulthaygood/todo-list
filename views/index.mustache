@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title> ToDo </title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+ </head>
+ <body>
+ <h2>Todo List</h2>
+ <form method="post" action="/">
+ <input type="text" name="todo" placeholder="Task"/>
+ <button type="submit"> Add Task </button>
+ </form>
+
+ {{#todos}}
+ <form class="todo_form"  method = "post" action = "/{{.}}">
+ <button type="submit"> Mark Complete </button>
+ <div>{{.}}</div>
+
+ </form>
+{{/todos}}
+
+ <div class="completed_list">
+ <h3>Completed Tasks</h3>
+ {{#complete}}
+ <div>{{.}}</div>
+    {{/complete}}
+</div> 
+ </body>
+ </html>

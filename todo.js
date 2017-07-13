@@ -1,23 +1,20 @@
 const express = require('express');
-const mustache = require('mustache');
+const mustache = require('mustache-express');
 const bodyParser = require('body-parser');
 
 var application = express();
-application.engine('mustache', express());
-application.use(express.static(__dirname + '/public'));
+application.engine('mustache', mustache());
+
 
 application.set('views', './views');
 application.set('view engine', 'mustache');
 
-application.use(bodyParser.urlencoded());
+application.use(express.static(__dirname + '/public'));
+application.use(bodyParser.urlencoded({ extended: false }));
 
-var todos = [
+var todos = [];
 
-];
-
-var complete = [
-
-];
+var complete = [];
 
 application.post("/:completeId", (request, response) =>{
     var item = request.params.completeId;
@@ -41,4 +38,6 @@ application.post("/", (request, response) => {
 
 });
 
-application.listen(3000);
+application.listen(3000, function () {
+    console.log('It works!');
+});

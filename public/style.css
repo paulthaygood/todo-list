@@ -1,46 +1,64 @@
 html{
     background-image: url(http://www.timvandevall.com/wp-content/uploads/2013/10/Printable-Notebook-Paper-04.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 h2{
-    margin-top: 54px;
-    margin-left: 90px;
+    margin-top: 7%;
+    margin-left: 10%;
+    text-decoration: underline;
 }
-.completed_list{
+.completed{
     color: black;
-    margin-top: 41px;
+    margin-top: 4.3%;
+    margin-left: 8.3%;
+    font-size: 1.2rem
 }
 
-h3{
-    margin-left: 150px;
-    font-size: 20px;
-}
 form{
-    margin-left: 150px;
+    margin-left: 8%;
     
 }
 
 input{
+    border: solid black;
+    border-radius: 5%;
+    font-size: 1rem;
     padding: 6px;
     margin-top:8px;
 }
 
 button{
-    padding:5px;
-    background-color: #abf0d1;
+    
+    background-color: red;
     border: thin solid black;
-    margin-right: 20px;
+    border-radius: 5%;
+    font-weight:bold;
+    padding:1%;
     
 }
 
-.completed_list div{
+.completed div{
+    color: darkgreen;
+    font-size: 1.3rem;
+    font-weight: bold;
     text-decoration: line-through;
-    margin-left: 150px;
+    margin-left: 2%;
 }
 
-.todo_form{
+.todo-form{
     display: flex;
+}
 
+.todo-form div{
+    color: red;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 3px;
+    margin-left: 1%;
+}
+
+.mark-as-complete-button button{
+    background-color:limegreen;
 }
